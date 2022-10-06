@@ -51,3 +51,28 @@ SELECT * FROM film
 WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 28.99);
 ```
 
+**HOMEWORK-3** <br/>
+
+*3.1*
+```
+SELECT country FROM country
+WHERE country LIKE 'A%a';
+```
+
+*3.2*
+```
+SELECT country FROM country
+WHERE country LIKE '%_____n';
+```
+
+*3.3*
+```
+SELECT title FROM film
+WHERE title ILIKE 't%t%t%t%';
+```
+
+*3.4*
+```
+SELECT * FROM film 
+WHERE title LIKE 'C%' AND length > 90 AND rental_rate IN (2.99);
+```
