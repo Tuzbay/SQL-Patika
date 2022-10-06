@@ -76,3 +76,33 @@ WHERE title ILIKE 't%t%t%t%';
 SELECT * FROM film 
 WHERE title LIKE 'C%' AND length > 90 AND rental_rate IN (2.99);
 ```
+
+**HOMEWORK-4** <br/>
+
+*4.1*
+```
+SELECT DISTINCT replacement_cost FROM film;
+```
+
+*4.2*
+```
+SELECT COUNT(DISTINCT replacement_cost) FROM film;
+```
+
+*4.3*
+```
+SELECT title, rating FROM film
+WHERE title LIKE 'T%' AND rating IN ('G');
+```
+
+*4.4*
+```
+SELECT country FROM country
+WHERE country LIKE '_____';
+```
+
+*4.5*
+```
+SELECT city FROM city
+WHERE city ILIKE '%R';
+```
