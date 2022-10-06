@@ -91,18 +91,18 @@ SELECT COUNT(DISTINCT replacement_cost) FROM film;
 
 *4.3*
 ```
-SELECT title, rating FROM film
+SELECT COUNT(*) FROM film
 WHERE title LIKE 'T%' AND rating IN ('G');
 ```
 
 *4.4*
 ```
-SELECT country FROM country
+SELECT COUNT(country) FROM country
 WHERE country LIKE '_____';
 ```
 
 *4.5*
 ```
-SELECT city FROM city
+SELECT COUNT(city) FROM city
 WHERE city ILIKE '%R';
 ```
