@@ -159,3 +159,36 @@ SELECT COUNT(DISTINCT replacement_cost)
 FROM film
 WHERE length > 150;
 ```
+
+**HOMEWORK-7** <br/>
+
+*7.1*
+```
+SELECT rating, COUNT(title) FROM film
+GROUP BY rating;
+```
+
+*7.2*
+```
+SELECT replacement_cost, COUNT(title)
+FROM film
+GROUP BY replacement_cost
+HAVING 50 < COUNT(title)
+ORDER BY COUNT(title) ASC;
+```
+
+*7.3*
+```SELECT store_id, COUNT(customer_id)
+FROM customer
+GROUP BY store_id
+ORDER BY store_id;
+```
+
+*7.4*
+```
+SELECT country_id, COUNT(city_id) 
+FROM city
+GROUP BY country_id
+ORDER BY COUNT(city_id) DESC
+LIMIT 1;
+```
