@@ -133,3 +133,29 @@ WHERE store_id = 1
 ORDER BY last_name DESC
 LIMIT 4;
 ```
+
+**HOMEWORK-6** <br/>
+
+*6.1*
+```
+SELECT ROUND(AVG(rental_rate), 2) FROM film;
+```
+
+*6.2*
+```
+SELECT COUNT(title) FROM film
+WHERE title LIKE 'C%';
+```
+
+*6.3*
+```
+SELECT MAX(length) FROM film
+WHERE rental_rate = 0.99;
+```
+
+*6.4*
+```
+SELECT COUNT(DISTINCT replacement_cost)
+FROM film
+WHERE length > 150;
+```
