@@ -390,3 +390,31 @@ EXCEPT ALL
 (SELECT first_name FROM customer
 ORDER BY first_name);
 ```
+
+**HOMEWORK-12** <br/>
+
+*12.1*
+```
+SELECT COUNT(*) , (SELECT AVG(length) FROM film ) FROM film
+WHERE  LENGTH > (SELECT AVG(length) FROM film);
+```
+
+*12.2*
+```
+SELECT COUNT(rental_rate) FROM film
+WHERE rental_rate= (SELECT MAX(rental_rate) FROM film);
+```
+
+*12.3*
+```
+SELECT rental_rate, replacement_cost, title  FROM film
+WHERE rental_rate = (select min(rental_rate) from film) and replacement_cost=(
+select min(replacement_cost) from film);
+```
+
+*12.4*
+```
+SELECT  customer_id, count(customer_id) FROM payment
+group by customer_id
+order by count(customer_id) DESC;
+```
