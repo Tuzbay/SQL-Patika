@@ -340,3 +340,53 @@ RIGHT JOIN payment ON payment.customer_id = customer.customer_id;
 SELECT rental.rental_id, customer.first_name , customer.last_name FROM customer
 FULL JOIN rental ON rental.customer_id = customer.customer_id;
 ```
+
+**HOMEWORK-11** <br/>
+
+*11.1*
+```
+(SELECT first_name FROM actor
+ORDER BY first_name)
+UNION
+(SELECT first_name FROM customer 
+ORDER BY  first_name);
+```
+
+*11.2*
+```
+(SELECT first_name FROM actor
+ORDER BY first_name)
+INTERSECT
+(SELECT first_name FROM customer 
+ORDER BY  first_name);
+```
+
+*11.3*
+```
+(SELECT first_name FROM actor
+ORDER BY first_name )
+EXCEPT
+(SELECT first_name FROM customer
+ORDER BY first_name);
+```
+
+*11.4*
+```
+(SELECT first_name FROM actor
+ORDER BY  first_name)
+UNION ALL 
+(SELECT first_name FROM customer
+ORDER BY first_name );
+
+(SELECT first_name FROM actor
+ORDER BY first_name)
+INTERSECT ALL
+(SELECT first_name FROM customer
+ORDER BY first_name );
+
+(SELECT first_name FROM actor
+ORDER BY first_name)
+EXCEPT ALL
+(SELECT first_name FROM customer
+ORDER BY first_name);
+```
