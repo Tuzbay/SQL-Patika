@@ -320,3 +320,23 @@ JOIN payment ON payment.customer_id = customer.customer_id;
 SELECT rental.rental_id, customer.first_name, customer.last_name FROM customer
 JOIN rental ON rental.customer_id = customer.customer_id;
 ```
+
+**HOMEWORK-10** <br/>
+
+*10.1*
+```
+SELECT city.city, country.country FROM city
+LEFT JOIN country ON country.country_id = city.country_id;
+```
+
+*10.2*
+```
+SELECT payment.payment_id, customer.first_name , customer.last_name FROM customer
+RIGHT JOIN payment ON payment.customer_id = customer.customer_id;
+```
+
+*10.3*
+```
+SELECT rental.rental_id, customer.first_name , customer.last_name FROM customer
+FULL JOIN rental ON rental.customer_id = customer.customer_id;
+```
